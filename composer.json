@@ -14,5 +14,10 @@
             "email": "malamqcfd@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.2",
+        "berlioz/http-message": "^2.4",
+        "psr/http-client": "^1.0",
+        "psr/http-message": "^2.0"
+    }
 }
