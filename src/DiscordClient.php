@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Malamdg\DiscordPhpClient;
 
 use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\ResponseInterface;
 
 class DiscordClient
 {
@@ -21,5 +22,10 @@ class DiscordClient
     public function setHttpClient(ClientInterface $httpClient): void
     {
         $this->httpClient = new HttpClientAdapter($httpClient, $this->options);
+    }
+
+    public function createInstantInvitation($channelId): Result
+    {
+        
     }
 }
