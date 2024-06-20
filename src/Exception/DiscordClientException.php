@@ -10,19 +10,19 @@ use Throwable;
 class DiscordClientException extends Exception
 {
     /**
-     * Unexpected happened during authentication.
+     * Unexpected happened while setup-ing client adapter.
      *
-     * @param Throwable|null $previous
+     * @param Throwable|null $e
      *
      * @return static
      */
-    public static function authenticate(?Throwable $previous = null): static
+    public static function setupClientAdapter(?Throwable $e = null): static
     {
-        return new self(message: "Authentication failed.", previous: $previous);
+        return new self(message: "Could not setup client adapter.", previous: $e);
     }
 
     /**
-     * Unexpected happened during authentication.
+     * Unexpected happened during request sending.
      *
      * @param Throwable|null $previous
      *
